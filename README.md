@@ -59,7 +59,7 @@ Below is a brief explanation of the command line arguments used to configure the
 
 ```bash
 # MLP as the backbone model, use NISE
-python local_model.py --party both --seed 0 --weight 50 --strategy adaptive_ucvrlc --ablation_weight 1 --device cuda:0 --frac 1.0
+python mlp_model.py --party both --seed 0 --weight 50 --strategy adaptive_ucvrlc --ablation_weight 1 --device cuda:0 --frac 1.0
 
 # DeepFM as the backbone model, use ESMM
 python deepfm_model.py --party both --seed 0 --weight 50 --strategy deepfm_esmm --ablation_weight 1 --device cuda:0
@@ -74,7 +74,7 @@ We refer to https://github.com/lorenmt/auto-lambda/blob/main/trainer_dense.py to
 ```bash
 # DTP Ali-CCP
 # MLP
-python local_model.py --party both --seed 0 --weight 50 --strategy dtp --ablation_weight 1 --device cuda:0 --frac 1.0
+python mlp_model.py --party both --seed 0 --weight 50 --strategy dtp --ablation_weight 1 --device cuda:0 --frac 1.0
 # DeepFM
 python deepfm_model.py --party both --seed 0 --weight 50 --strategy deepfm_dtp --ablation_weight 1 --device cuda:0
 # DCN
@@ -82,7 +82,7 @@ python dcn_model.py --party both --seed 0 --weight 50 --strategy dcn_dtp --ablat
 
 # DWA Ali-CCP
 # MLP
-python local_model.py --party both --seed 0 --weight 50 --strategy dwa --ablation_weight 1 --device cuda:0 --frac 1.0
+python mlp_model.py --party both --seed 0 --weight 50 --strategy dwa --ablation_weight 1 --device cuda:0 --frac 1.0
 # DeepFM
 python deepfm_model.py --party both --seed 0 --weight 50 --strategy deepfm_dwa --ablation_weight 1 --device cuda:0
 # DCN
@@ -93,7 +93,7 @@ python dcn_model.py --party both --seed 0 --weight 50 --strategy dcn_dwa --ablat
 We use the Ali-CCP dataset and use three backbone models: MLP, DeepFM and DCNv2
 ```bash
 # MLP as the backbone model, test NISE-1
-python local_model.py --party both --seed 0 --weight 50 --strategy ablation_1 --ablation_weight 1 --device cuda:0 --frac 1.0
+python mlp_model.py --party both --seed 0 --weight 50 --strategy ablation_1 --ablation_weight 1 --device cuda:0 --frac 1.0
 
 # DeepFM as the backbone model, use NISE-2
 python deepfm_model.py --party both --seed 0 --weight 50 --strategy ablation_2 --ablation_weight 1 --device cuda:0
